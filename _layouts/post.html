@@ -1,0 +1,17 @@
+<style>
+  #post {
+    font-family: "Source Code Pro", monospace;
+  }
+
+  .meta {
+    font-size: 15px;
+  }
+
+</style>
+<div id="post">
+  <h1 id="title">{{ page.title }}</h1>
+  <p class="meta">Posted: {{ page.date | date_to_string }}</p>
+  <div class="post">
+    {{ content }}
+  </div>
+</div>

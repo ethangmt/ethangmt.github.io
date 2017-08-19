@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="monokai.css">
+    <title>ethangmt</title>
+  </head>
+  <style>
+    #bar {
+      position: relative;
+      width: 100%;
+    }
 
+    #bar h1 {
+      font-family: "Source Code Pro", monospace;
+      padding-left: 10%;
+      font-size: 40px;
+    }
+
+    #bar h1 span {
+      font-size: 12px;
+    }
+
+    #posts {
+      /*background-color: #6b7c99;*/
+      width: 80%;
+      position: absolute;
+      right: 0px;
+    }
+
+    #side {
+      font-family: "Source Code Pro", monospace;
+      /*background-color: #5591c6;*/
+      width: 20%;
+      position: absolute;
+      left: 0px;
+    }
+
+    #side h2 {
+      padding-left: 5%;
+    }
+
+    a:link, a:visited {
+      color: #000000;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+  </style>
+  <body>
+    <div id="bar">
+      <h1>ethangmt<span> i write code and stuff</span></h1>
+    </div>
+
+    <div id="posts">
+      {% for post in site.posts %}
+  	    <span>{{ post }}</span>
+  	  {% endfor %}
+    </div>
+
+    <div id="side">
+      <h2>Posts</h2>
+      <ul>
+      {% for post in site.posts %}
+        <a href="{{ post.url }}"><li>{{ post.title }}</li></a>
+        <br>
+      {% endfor %}
+      <ul>
+    </div>
+
+  </body>
+</html>
