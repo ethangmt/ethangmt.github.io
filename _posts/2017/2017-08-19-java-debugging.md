@@ -111,7 +111,9 @@ com.sun.tools.example.debug.expr.ParseException: Name unknown: a
 
 Cannot print or dump variables if class is not compiled with -g option.
 
-`javac -g example.java`
+```
+javac -g example.java
+```
 
 ```
 main[1] dump a
