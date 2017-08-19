@@ -22,9 +22,9 @@
 
     #posts {
       /*background-color: #6b7c99;*/
-      width: 80%;
+      width: 70%;
       position: absolute;
-      right: 0px;
+      right: 5%;
     }
 
     #side {
@@ -50,12 +50,12 @@
   </style>
   <body>
     <div id="bar">
-      <h1>ethangmt<span> i write code and stuff</span></h1>
+      <h1>ethangmt<span> i write code</span></h1>
     </div>
 
     <div id="posts">
       {% for post in site.posts %}
-  	    <span>{{ post }}</span>
+  	    {{ post }}
   	  {% endfor %}
     </div>
 

@@ -8,9 +8,9 @@ JDB is a simple command line Java debugger.
 
 ---
 
-#### Starting jdb session
+### Starting a jdb session
 
-```Java
+```java
 import java.util.LinkedList;
 
 public class example
@@ -41,7 +41,7 @@ Initializing jdb ...
 
 ---
 
-#### Breakpoints
+### Breakpoints
 Lines
 
 ```
@@ -72,31 +72,37 @@ Removed: breakpoint example:5
 
 Continue after hitting a breakpoint
 
-`> cont`
+```
+> cont
+```
 
 Continue one line
 
-`> next`
+```
+> next
+```
 
 Step into function
 
-`> step`
-
-Print where you are in the class
-
-`> where`
+```
+> step
+```
 
 Print source code
 
-`> list`
+```
+> list
+```
 
 Run class
 
-`> run example`
+```
+> run example
+```
 
 ---
 
-#### Printing
+### Printing
 ```
 main[1] dump a
 com.sun.tools.example.debug.expr.ParseException: Name unknown: a
@@ -117,7 +123,7 @@ main[1] print a
 a = 2
 ```
 
-Both print and dump can print the primitive data types. Print can also evaluate expressions.
+Both print and dump can print primitive data types. Print can also evaluate expressions.
 
 ```
 main[1] print 2 + 2
