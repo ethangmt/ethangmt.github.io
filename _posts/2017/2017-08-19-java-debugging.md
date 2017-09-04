@@ -2,6 +2,7 @@
 layout: post
 title: Debugging Java Programs With JDB
 date: 2017-08-19
+last_modified: 2017-08-19
 ---
 
 JDB is a simple command line Java debugger.

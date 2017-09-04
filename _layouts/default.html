@@ -3,8 +3,8 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <title>ethangmt</title>
+    {% include analytics.html %}
   </head>
-  {% include analytics.html %}
   <style>
     #bar {
       position: relative;
@@ -13,19 +13,30 @@
 
     #bar h1 {
       font-family: "Source Code Pro", monospace;
-      padding-left: 10%;
-      font-size: 40px;
+      padding-left: 5%;
+      /*font-size: 40px;*/
+      font-size: 15px;
+      color: #42f456;
+      white-space: pre;
+      background-color: #000000;
+    }
+
+    #bar h1:hover {
+      /*font-size: 50px;*/
+      font-size: 18px;
+      color: #d62f2f;
     }
 
     #bar h1 span {
       font-size: 12px;
+      color: #000000;
     }
 
     #posts {
       /*background-color: #6b7c99;*/
       width: 70%;
       position: absolute;
-      right: 5%;
+      left: 5%;
     }
 
     #side {
@@ -33,7 +44,7 @@
       /*background-color: #5591c6;*/
       width: 20%;
       position: absolute;
-      left: 0px;
+      right: 0px;
     }
 
     #side h2 {
@@ -45,13 +56,27 @@
     }
 
     a {
-      text-decoration: underline;
+      /*text-decoration: underline;*/
+      text-decoration: none;
     }
 
   </style>
   <body>
     <div id="bar">
-      <h1>ethangmt<span> i write code</span></h1>
+      <!--<a href="https://github.com/ethangmt"><h1>ethangmt<span> i write code</span></h1></a>-->
+      <a href="https://github.com/ethangmt"><h1>
+            ___                       ___           ___           ___           ___           ___
+           /  /\          ___        /__/\         /  /\         /__/\         /  /\         /__/\          ___
+          /  /:/_        /  /\       \  \:\       /  /::\        \  \:\       /  /:/_       |  |::\        /  /\
+         /  /:/ /\      /  /:/        \__\:\     /  /:/\:\        \  \:\     /  /:/ /\      |  |:|:\      /  /:/
+        /  /:/ /:/_    /  /:/     ___ /  /::\   /  /:/~/::\   _____\__\:\   /  /:/_/::\   __|__|:|\:\    /  /:/
+       /__/:/ /:/ /\  /  /::\    /__/\  /:/\:\ /__/:/ /:/\:\ /__/::::::::\ /__/:/__\/\:\ /__/::::| \:\  /  /::\
+       \  \:\/:/ /:/ /__/:/\:\   \  \:\/:/__\/ \  \:\/:/__\/ \  \:\~~\~~\/ \  \:\ /~~/:/ \  \:\~~\__\/ /__/:/\:\
+        \  \::/ /:/  \__\/  \:\   \  \::/       \  \::/       \  \:\  ~~~   \  \:\  /:/   \  \:\       \__\/  \:\
+         \  \:\/:/        \  \:\   \  \:\        \  \:\        \  \:\        \  \:\/:/     \  \:\           \  \:\
+          \  \::/          \__\/    \  \:\        \  \:\        \  \:\        \  \::/       \  \:\           \__\/
+           \__\/                     \__\/         \__\/         \__\/         \__\/         \__\/
+      </h1><!--<h1><span> i write code</span></h1>--></a>
     </div>
 
     <div id="posts">
@@ -62,7 +87,7 @@
 
     <div id="side">
       <h2>Posts</h2>
-      <ul>
+      <!--Recent posts<ul> -->
       {% for post in site.posts %}
         <a href="{{ post.url }}"><li>{{ post.title }}</li></a>
         <br>
