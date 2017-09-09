@@ -1,22 +1,40 @@
 <head>
   <link href="../../../syntax.css" rel="stylesheet">
   {% include analytics.html %}
+  {% seo %}
 </head>
 <style>
+  #title {
+    font-size: 50px;
+  }
+
   #post {
     font-family: "Source Code Pro", monospace;
+    padding-left: 20%;
+    width: 60%;
   }
 
   .meta {
     font-size: 15px;
   }
 
+  a:link, a:visited {
+    color: #000000;
+  }
+
+  a {
+    /*text-decoration: underline;*/
+    text-decoration: none;
+  }
+
 </style>
 <div id="post">
-  <h1 id="title">{{ page.title }}</h1>
+  <a href="{{ page.url }}"><h1 id="title">{{ page.title }}</h1></a>
   <p class="meta">Posted: {{ page.date | date_to_string }}</p>
   <p class="meta">Last Modified: {{ page.last_modified | date_to_string }}</p>
   {{ content }}
+  <br>
+  <br>
   <br>
   <br>
 </div>
